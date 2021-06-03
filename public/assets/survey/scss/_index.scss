@@ -1,0 +1,204 @@
+/*  Header Styles  */
+.header-wrapper {
+    .navbar {
+        background-color: $color-green;
+        padding: 15px 60px;
+        transition: all 0.3s ease-in-out;
+        .navbar-brand {
+            font-size: 24px;
+        }
+        .navbar-nav {
+            .nav-item {
+                &:not(:first-of-type) {
+                    @include margin(null, null, null, 2rem);
+                }
+                .nav-link {
+                    font-size: 14px;
+                    color: $color-white;
+                }
+            }
+        }
+        &.scroll-menu {
+            background-color: $color-white;
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $title-color;
+                    }
+                }
+            }
+        }
+        .service-wrapper {
+            font-size: 30px;
+        }
+        .number-wrapper {
+            font-size: 15px;
+        }
+    }
+}
+
+/* Home Banner Styles */
+.home-banner-wrapper {
+    padding-top: 80px;
+    background-color: $color-green;
+    .banner-title{
+        &.title{
+            margin-bottom: 30px;
+        }
+    }
+}
+.pricing-wrapper {
+    .pricing-text {
+        font-size: 24px;
+        font-weight: bold;
+        color: $title-color;
+    }
+}
+
+.contactFromWrapper {
+    .form-control {
+        @include padding(17px, null, 17px, null);
+        border-radius: 2px;
+        font-size: 16px;
+        box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.05);
+        border: solid 1px #9a9a9a;
+    }
+    .contact-us-button {
+        width: 100%;
+        height: 45px;
+        margin-top: 15px;
+        vertical-align: middle;
+        border: 0;
+        font-size: 16px;
+        border-radius: 2px;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+        background: #00afaa;
+    }
+    #contactusForm{
+        color: $color-red;
+    }
+}
+.contactDetailsAddress {
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 20px;
+        max-width: 370px;
+        margin-top: 20px;
+    }
+}
+
+/* How-it-work Styles */
+.how-it-works-wrapper {
+    .how-it-works-inner {
+        // background: url("../images/how-it-works-bg.png");
+        background-color: $color-green;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $color-white;
+        padding: 60px 0;
+        .how-it-works-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .how-it-works-content {
+            .step-number {
+                background: url("../images/spritesheet.png");
+                @include size(96px, 96px);
+                text-align: center;
+                font-size: 48px;
+                font-weight: 300;
+                padding-top: 13px;
+                padding-left: 2px;
+                background-position: -1px -1px;
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
+/* Product Section Style */
+.product-wrapper {
+    .logo-wrapper {
+        @include size(150px,150px);
+        font-size: 70px;
+        border: 1px solid $color-green;
+        color: $color-white;
+        background-color: $color-green;
+        margin: 0 auto;
+        border-radius: 50%;
+        span{
+            margin-top: 35px;
+        }
+    }
+    p {
+        color: $color-black;
+    }
+}
+ 
+/* Form Styles */
+.form-wrapper {
+    position: relative;
+    border: 1px solid $color-green;
+    padding: 20px 30px;
+    background-color: $color-white;
+    border-radius: 20px;
+    height: 500px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    .progress {
+        background: $color-yellow;
+        .progress-bar {
+            background-color: $color-green;
+        }
+    }
+    .error {
+        color: $color-red;
+    }
+        .btn {
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+            color: $color-white;
+            background-color: $color-green;
+            border-radius: 20px;
+            font-size: 21px;
+            font-weight: 300;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .question {
+            display: none;
+            &.isCurrent {
+                display: block;
+            }
+        }
+        .question-wrapper{
+        color: #00afaa;
+        font-size: 24px;
+        }
+        .submitBtn {
+            width: 105px;
+        }
+}
+
+
+
+/* Media Styles */
+@media (max-width: $break-md) {
+    .header-wrapper {
+        .navbar {
+            padding: 15px;
+            .navbar-nav {
+                .nav-item {
+                    &:not(:first-of-type) {
+                        @include margin(null, null, null, 0rem);
+                    }
+                }
+            }
+        }
+    }
+}

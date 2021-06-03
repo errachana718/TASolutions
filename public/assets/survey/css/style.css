@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/* Font Styles Files Uplodding */
+@font-face {
+  font-family: "Graphik-Regular";
+  src: url("../fonts/Graphik-Regular-Web.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "Graphik-Light";
+  src: url("../fonts/Graphik-Light-Web.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "Graphik-Medium";
+  src: url("../fonts/Graphik-Medium-Web.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "Graphik-Semibold";
+  src: url("../fonts/Graphik-Semibold.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "Rhode-Medium";
+  src: url("../fonts/Rhode-Medium-Condensed.woff2") format("woff2"); }
+
+/* Common Styles Start from Here */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-family: "Graphik-Regular", sans-serif; }
+
+body a {
+  text-decoration: none !important; }
+
+button {
+  outline: none; }
+  button:focus {
+    outline: none !important; }
+
+.Graphik-Regular {
+  font-family: "Graphik-Regular", sans-serif !important; }
+
+.Graphik-Light {
+  font-family: "Graphik-Light", sans-serif !important; }
+
+.Graphik-Medium {
+  font-family: "Graphik-Medium", sans-serif !important; }
+
+.Graphik-Semibold {
+  font-family: "Graphik-Semibold", sans-serif !important; }
+
+.Rhode-Medium {
+  font-family: "Rhode-Medium", sans-serif !important; }
+
+.section-padding {
+  padding: 80px 0 0px; }
+
+.main-content {
+  margin-top: 80px; }
+
+.title {
+  color: #18273a;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 60px; }
+
+.text {
+  color: #6F8086;
+  font-size: 17px;
+  text-align: left; }
+
+.service-image {
+  max-width: 480px; }
+
+.BulletList {
+  padding-left: 20px; }
+  .BulletList:before {
+    content: "•";
+    left: 0;
+    position: absolute;
+    top: -3px;
+    font-size: 20px; }
+
+.section-bg {
+  background: #F3F5F9; }
+
+.submitBtn {
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  vertical-align: middle;
+  border: 0;
+  font-size: 16px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.05);
+  background: #00afaa; }
+
+.question label {
+  display: block; }
+  .question label.error {
+    display: none; }
+
+#submit_message {
+  display: none; }
+
+.show {
+  display: block !important; }
+
+.hide {
+  display: none !important; }
+
+.custom-checkBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .custom-checkBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+    .custom-checkBox input:checked ~ .checkmark {
+      background: #00afaa; }
+      .custom-checkBox input:checked ~ .checkmark:after {
+        display: block; }
+  .custom-checkBox .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee; }
+    .custom-checkBox .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 4px;
+      width: 8px;
+      height: 14px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
+.custom-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+    .custom-radio input:checked ~ .checkmark {
+      background-color: #00afaa; }
+      .custom-radio input:checked ~ .checkmark:after {
+        display: block; }
+  .custom-radio .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%; }
+    .custom-radio .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white; }
+
+/*  Header Styles  */
+.header-wrapper .navbar {
+  background-color: #00afaa;
+  padding: 15px 60px;
+  transition: all 0.3s ease-in-out; }
+  .header-wrapper .navbar .navbar-brand {
+    font-size: 24px; }
+  .header-wrapper .navbar .navbar-nav .nav-item:not(:first-of-type) {
+    margin-left: 2rem; }
+  .header-wrapper .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    color: #ffffff; }
+  .header-wrapper .navbar.scroll-menu {
+    background-color: #ffffff; }
+    .header-wrapper .navbar.scroll-menu .navbar-nav .nav-item .nav-link {
+      color: #18273a; }
+  .header-wrapper .navbar .service-wrapper {
+    font-size: 30px; }
+  .header-wrapper .navbar .number-wrapper {
+    font-size: 15px; }
+
+/* Home Banner Styles */
+.home-banner-wrapper {
+  padding-top: 80px;
+  background-color: #00afaa; }
+  .home-banner-wrapper .banner-title.title {
+    margin-bottom: 30px; }
+
+.pricing-wrapper .pricing-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #18273a; }
+
+.contactFromWrapper .form-control {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 2px;
+  font-size: 16px;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #9a9a9a; }
+
+.contactFromWrapper .contact-us-button {
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  vertical-align: middle;
+  border: 0;
+  font-size: 16px;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  background: #00afaa; }
+
+.contactFromWrapper #contactusForm {
+  color: #ff0000; }
+
+.contactDetailsAddress h2 {
+  font-size: 28px; }
+
+.contactDetailsAddress p {
+  font-size: 20px;
+  max-width: 370px;
+  margin-top: 20px; }
+
+/* How-it-work Styles */
+.how-it-works-wrapper .how-it-works-inner {
+  background-color: #00afaa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding: 60px 0; }
+  .how-it-works-wrapper .how-it-works-inner .how-it-works-title {
+    font-size: 30px;
+    margin-bottom: 20px; }
+  .how-it-works-wrapper .how-it-works-inner .how-it-works-content .step-number {
+    background: url("../images/spritesheet.png");
+    width: 96px;
+    height: 96px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    padding-top: 13px;
+    padding-left: 2px;
+    background-position: -1px -1px;
+    margin: 20px auto; }
+
+/* Product Section Style */
+.product-wrapper .logo-wrapper {
+  width: 150px;
+  height: 150px;
+  font-size: 70px;
+  border: 1px solid #00afaa;
+  color: #ffffff;
+  background-color: #00afaa;
+  margin: 0 auto;
+  border-radius: 50%; }
+  .product-wrapper .logo-wrapper span {
+    margin-top: 35px; }
+
+.product-wrapper p {
+  color: #000000; }
+
+/* Form Styles */
+.form-wrapper {
+  position: relative;
+  border: 1px solid #00afaa;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  height: 500px;
+  overflow-y: auto;
+  margin-bottom: 20px; }
+  .form-wrapper .progress {
+    background: #ffd433; }
+    .form-wrapper .progress .progress-bar {
+      background-color: #00afaa; }
+  .form-wrapper .error {
+    color: #ff0000; }
+  .form-wrapper .btn {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    color: #ffffff;
+    background-color: #00afaa;
+    border-radius: 20px;
+    font-size: 21px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+  .form-wrapper .question {
+    display: none; }
+    .form-wrapper .question.isCurrent {
+      display: block; }
+  .form-wrapper .question-wrapper {
+    color: #00afaa;
+    font-size: 24px; }
+  .form-wrapper .submitBtn {
+    width: 105px; }
+
+/* Media Styles */
+@media (max-width: 991px) {
+  .header-wrapper .navbar {
+    padding: 15px; }
+    .header-wrapper .navbar .navbar-nav .nav-item:not(:first-of-type) {
+      margin-left: 0rem; } }

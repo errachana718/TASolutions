@@ -1,0 +1,216 @@
+/* Font Styles Files Uplodding */
+@font-face {
+  font-family: "Graphik-Regular";
+  src: url("../fonts/Graphik-Regular-Web.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Graphik-Light";
+  src: url("../fonts/Graphik-Light-Web.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Graphik-Medium";
+  src: url("../fonts/Graphik-Medium-Web.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Graphik-Semibold";
+  src: url("../fonts/Graphik-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Rhode-Medium";
+  src: url("../fonts/Rhode-Medium-Condensed.woff2") format("woff2");
+}
+
+/* Common Styles Start from Here */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  @include margin(0, 0, 0, 0);
+  font-family: "Graphik-Regular", sans-serif;
+}
+body a {
+  text-decoration: none !important;
+}
+
+button {
+  outline: none;
+  &:focus {
+    outline: none !important;
+  }
+}
+.Graphik-Regular {
+  font-family: "Graphik-Regular", sans-serif !important;
+}
+.Graphik-Light {
+  font-family: "Graphik-Light", sans-serif !important;
+}
+.Graphik-Medium {
+  font-family: "Graphik-Medium", sans-serif !important;
+}
+.Graphik-Semibold {
+  font-family: "Graphik-Semibold", sans-serif !important;
+}
+.Rhode-Medium {
+  font-family: "Rhode-Medium", sans-serif !important;
+}
+
+.section-padding {
+  padding: 80px 0 0px;
+}
+.main-content {
+  margin-top: 80px;
+}
+.title {
+  color: $title-color;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.text {
+  color: $text-color;
+  font-size: 17px;
+  text-align: left;
+}
+.service-image {
+  max-width: 480px;
+}
+.BulletList {
+  padding-left: 20px;
+  &:before {
+    content: "•";
+    left: 0;
+    position: absolute;
+    top: -3px;
+    font-size: 20px;
+  }
+}
+.section-bg {
+  background: $section-bg;
+}
+
+.submitBtn {
+  @include size(100%, 45px);
+  @include margin(15px, null, null, null);
+  vertical-align: middle;
+  border: 0;
+  font-size: 16px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.05);
+  background: $color-green;
+}
+
+.question {
+  label {
+    display: block;
+    &.error {
+      display: none;
+    }
+  }
+}
+#submit_message {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+
+.custom-checkBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked {
+      & ~ .checkmark {
+        background: $color-green;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 4px;
+      width: 8px;
+      height: 14px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.custom-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked {
+      & ~ .checkmark {
+        background-color: $color-green;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+}
